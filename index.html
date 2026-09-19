@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Demo</title>
+
+  <title>Roblox Login Demo</title>
 
   <style>
     * {
@@ -13,151 +14,207 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: #24262d;
       font-family: Arial, Helvetica, sans-serif;
+      background: #17191c;
       color: white;
+
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .login-box {
-      width: 330px;
-      padding: 20px 14px 30px;
+    .login-box,
+    .success-box {
+      width: 390px;
+      background: #24272b;
+      border-radius: 10px;
+      padding: 38px 34px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
       text-align: center;
     }
 
     h1 {
-      margin: 0 0 10px;
-      font-size: 31px;
-      font-weight: 700;
+      margin: 0 0 28px;
+      font-size: 25px;
     }
 
-    input {
+    .input {
       width: 100%;
-      height: 38px;
-      margin: 8px 0;
-      padding: 0 12px;
+      height: 48px;
+      margin-bottom: 14px;
+      padding: 0 14px;
+
+      border: 1px solid #44484e;
       border-radius: 7px;
-      border: 1px solid #50535d;
-      background: #343740;
+
+      background: #191b1e;
       color: white;
-      font-size: 16px;
+
+      font-size: 15px;
       outline: none;
     }
 
-    input::placeholder {
-      color: #e5e5e5;
+    .input::placeholder {
+      color: #999;
     }
 
-    input:focus {
-      border-color: #aaa;
+    .input:focus {
+      border-color: #777;
     }
 
-    .login-btn {
+    .login-button {
       width: 100%;
-      height: 37px;
-      margin-top: 0;
-      border: 1px solid white;
+      height: 48px;
+      margin-top: 6px;
+
+      border: none;
       border-radius: 7px;
-      background: transparent;
-      color: white;
-      font-size: 16px;
+
+      background: white;
+      color: #17191c;
+
+      font-size: 15px;
+      font-weight: bold;
       cursor: pointer;
     }
 
-    .login-btn:hover {
-      background: #30323a;
+    .login-button:hover {
+      background: #e5e5e5;
     }
 
     .forgot {
       display: block;
-      margin: 25px 0 30px;
-      color: white;
-      font-weight: bold;
+      margin-top: 18px;
+
+      color: #bdbdbd;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     .divider {
-      height: 1px;
-      background: #3b3d45;
-      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 25px 0;
+
+      color: #777;
+      font-size: 12px;
     }
 
-    .secondary-btn {
+    .divider::before,
+    .divider::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: #3d4146;
+    }
+
+    .create-button {
       width: 100%;
-      height: 37px;
-      margin: 6px 0;
-      border: 0;
+      height: 46px;
+
+      border: 1px solid #555;
       border-radius: 7px;
-      background: #3b3e48;
+
+      background: transparent;
       color: white;
-      font-size: 16px;
-      font-weight: bold;
+
+      font-size: 14px;
       cursor: pointer;
     }
 
-    .secondary-btn:hover {
-      background: #454853;
+    .demo {
+      margin-top: 22px;
+      color: #777;
+      font-size: 11px;
     }
 
-    .signup {
-      display: block;
-      margin-top: 36px;
-      color: white;
-      font-size: 16px;
-      text-decoration: none;
+    .success-box {
+      display: none;
     }
 
-    .signup span {
+    .success-icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .success-box h1 {
+      margin-bottom: 12px;
+    }
+
+    .success-text {
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .continue-button {
+      width: 100%;
+      height: 46px;
+
+      border: none;
+      border-radius: 7px;
+
+      background: white;
+      color: #17191c;
+
       font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="login-box">
+  <!-- PAGINA DE LOGIN -->
+  <div class="login-box" id="loginPage">
 
-    <h1>Login Demo</h1>
+    <h1>Log in to Roblox</h1>
 
     <input
+      class="input"
       type="text"
-      placeholder="Username/Email/Phone"
+      placeholder="Username"
       autocomplete="off"
     >
 
     <input
+      class="input"
       type="password"
       placeholder="Password"
       autocomplete="off"
     >
 
-    <!-- Demo: nu trimite date -->
-    <button class="login-btn" type="button">
+    <button class="login-button" onclick="loginDemo()">
       Log In
     </button>
 
-    <a href="#" class="forgot">
+    <a class="forgot" href="#" onclick="return false;">
       Forgot Password or Username?
     </a>
 
-    <div class="divider"></div>
+    <div class="divider">
+      OR
+    </div>
 
-    <button class="secondary-btn" type="button">
-      Email Me a One-Time Code
+    <button class="create-button" onclick="return false;">
+      Create Account
     </button>
 
-    <button class="secondary-btn" type="button">
-      Quick Sign-in
-    </button>
-
-    <a href="#" class="signup">
-      Don't have an account? <span>Sign Up</span>
-    </a>
+    <div class="demo">
+      Demo neoficial — datele introduse nu sunt salvate sau trimise.
+    </div>
 
   </div>
 
-</body>
-</html>
+
+  <!-- PAGINA DE SUCCES -->
+  <div class="success-box" id="successPage">
+
+    <div class="success-icon">✓</div>
+
+    <h1>Login Successful!</h1>
+
+    <div class="success-text">
+      Ai intrat cu succes în jocul demonstrativ.
+    </
