@@ -1,5 +1,5 @@
-```html
 <!DOCTYPE html>
+
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
@@ -44,7 +44,7 @@
       padding: 0 13px;
       border: 1px solid #3f4148;
       border-radius: 6px;
-      background: #000;
+      background: #000000;
       color: white;
       font-size: 15px;
       outline: none;
@@ -64,7 +64,7 @@
       margin-top: 10px;
       border: 1px solid #555;
       border-radius: 6px;
-      background: #000;
+      background: #000000;
       color: white;
       font-size: 15px;
       font-weight: 600;
@@ -72,7 +72,7 @@
     }
 
     .login-btn:hover {
-      background: #111;
+      background: #111111;
     }
 
     .forgot {
@@ -107,5 +107,62 @@
     }
 
     .signup {
-      margin-top:
+      margin-top: 28px;
+      color: white;
+      font-size: 14px;
+    }
+
+    .signup span {
+      font-weight: 700;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="login-box">
+
 ```
+<h1>Log In</h1>
+
+<input
+  type="text"
+  placeholder="Username/Email/Phone"
+  autocomplete="off"
+>
+
+<input
+  type="password"
+  placeholder="Password"
+  autocomplete="off"
+>
+
+<button class="login-btn" type="button">
+  Log In
+</button>
+
+<div class="forgot">
+  Forgot Password or Username?
+</div>
+
+<div class="divider"></div>
+
+<button class="secondary-btn" type="button">
+  Email Me a One-Time Code
+</button>
+
+<button class="secondary-btn" type="button">
+  Quick Sign-in
+</button>
+
+<div class="signup">
+  Don't have an account? <span>Sign Up</span>
+</div>
+```
+
+  </div>
+
+</body>
+</html>
