@@ -3,74 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Login - Demo</title>
+  <title>Login Demo</title>
+
   <style>
     * {
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     body {
       margin: 0;
       min-height: 100vh;
+      background: #24262d;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
       display: flex;
-      align-items: center;
       justify-content: center;
-      background: #f2f2f2;
+      align-items: center;
     }
 
     .login-box {
-      width: 360px;
-      padding: 32px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,.15);
+      width: 330px;
+      padding: 20px 14px 30px;
       text-align: center;
     }
 
-    .logo {
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 25px;
-      letter-spacing: -1px;
-    }
-
-    .demo {
-      font-size: 12px;
-      color: #777;
-      margin-bottom: 20px;
+    h1 {
+      margin: 0 0 10px;
+      font-size: 31px;
+      font-weight: 700;
     }
 
     input {
       width: 100%;
-      padding: 14px;
-      margin: 7px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 15px;
+      height: 38px;
+      margin: 8px 0;
+      padding: 0 12px;
+      border-radius: 7px;
+      border: 1px solid #50535d;
+      background: #343740;
+      color: white;
+      font-size: 16px;
+      outline: none;
     }
 
-    button {
+    input::placeholder {
+      color: #e5e5e5;
+    }
+
+    input:focus {
+      border-color: #aaa;
+    }
+
+    .login-btn {
       width: 100%;
-      padding: 14px;
-      margin-top: 14px;
+      height: 37px;
+      margin-top: 0;
+      border: 1px solid white;
+      border-radius: 7px;
+      background: transparent;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background: #30323a;
+    }
+
+    .forgot {
+      display: block;
+      margin: 25px 0 30px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #3b3d45;
+      margin-bottom: 18px;
+    }
+
+    .secondary-btn {
+      width: 100%;
+      height: 37px;
+      margin: 6px 0;
       border: 0;
-      border-radius: 6px;
-      background: #222;
+      border-radius: 7px;
+      background: #3b3e48;
       color: white;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    button:hover {
-      background: #444;
+    .secondary-btn:hover {
+      background: #454853;
     }
 
-    #message {
-      margin-top: 15px;
-      color: #555;
-      font-size: 14px;
+    .signup {
+      display: block;
+      margin-top: 36px;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .signup span {
+      font-weight: bold;
     }
   </style>
 </head>
@@ -78,26 +119,45 @@
 <body>
 
   <div class="login-box">
-    <div class="logo">BLOCKWORLD</div>
 
-    <div class="demo">
-      DEMO — nu colectează date reale
-    </div>
+    <h1>Login Demo</h1>
 
-    <input type="text" placeholder="Username">
-    <input type="password" placeholder="Password">
+    <input
+      type="text"
+      placeholder="Username/Email/Phone"
+      autocomplete="off"
+    >
 
-    <button onclick="demoLogin()">Log In</button>
+    <input
+      type="password"
+      placeholder="Password"
+      autocomplete="off"
+    >
 
-    <div id="message"></div>
+    <!-- Demo: nu trimite date -->
+    <button class="login-btn" type="button">
+      Log In
+    </button>
+
+    <a href="#" class="forgot">
+      Forgot Password or Username?
+    </a>
+
+    <div class="divider"></div>
+
+    <button class="secondary-btn" type="button">
+      Email Me a One-Time Code
+    </button>
+
+    <button class="secondary-btn" type="button">
+      Quick Sign-in
+    </button>
+
+    <a href="#" class="signup">
+      Don't have an account? <span>Sign Up</span>
+    </a>
+
   </div>
-
-  <script>
-    function demoLogin() {
-      document.getElementById("message").textContent =
-        "Acesta este doar un demo. Datele nu sunt trimise nicăieri.";
-    }
-  </script>
 
 </body>
 </html>
