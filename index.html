@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Demo</title>
+  <title>Log In</title>
 
   <style>
     * {
@@ -14,7 +14,7 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: #000000;
+      background: #18191c;
       font-family: Arial, Helvetica, sans-serif;
       color: white;
       display: flex;
@@ -23,102 +23,101 @@
     }
 
     .login-box {
-      width: 330px;
-      padding: 20px 14px 30px;
+      width: 380px;
+      padding: 32px 28px;
+      background: #232428;
+      border-radius: 8px;
       text-align: center;
     }
 
     h1 {
-      margin: 0 0 6px;
-      font-size: 31px;
+      margin: 0 0 24px;
+      font-size: 30px;
       font-weight: 700;
-    }
-
-    .demo-text {
-      margin: 0 0 12px;
-      color: #aaa;
-      font-size: 13px;
+      color: white;
     }
 
     input {
+      display: block;
       width: 100%;
-      height: 38px;
+      height: 44px;
       margin: 8px 0;
-      padding: 0 12px;
-      border-radius: 7px;
-      border: 1px solid #50535d;
-      background: #343740;
+      padding: 0 13px;
+      border: 1px solid #3f4148;
+      border-radius: 6px;
+      background: #000;
       color: white;
-      font-size: 16px;
+      font-size: 15px;
       outline: none;
     }
 
     input::placeholder {
-      color: #e5e5e5;
+      color: #b8b8b8;
     }
 
     input:focus {
-      border-color: #aaa;
+      border-color: #777;
     }
 
     .login-btn {
       width: 100%;
-      height: 37px;
-      margin-top: 0;
-      border: 1px solid white;
-      border-radius: 7px;
-      background: transparent;
+      height: 44px;
+      margin-top: 10px;
+      border: 1px solid #555;
+      border-radius: 6px;
+      background: #000;
       color: white;
-      font-size: 16px;
+      font-size: 15px;
+      font-weight: 600;
       cursor: pointer;
     }
 
     .login-btn:hover {
-      background: #30323a;
+      background: #111;
     }
 
     .forgot {
       display: block;
-      margin: 25px 0 30px;
+      margin: 22px 0 25px;
       color: white;
-      font-weight: bold;
+      font-size: 14px;
+      font-weight: 600;
       text-decoration: none;
-      font-size: 16px;
     }
 
     .divider {
       height: 1px;
-      background: #3b3d45;
+      background: #3a3b40;
       margin-bottom: 18px;
     }
 
     .secondary-btn {
       width: 100%;
-      height: 37px;
-      margin: 6px 0;
+      height: 42px;
+      margin: 5px 0;
       border: 0;
-      border-radius: 7px;
-      background: #3b3e48;
+      border-radius: 6px;
+      background: #393a40;
       color: white;
-      font-size: 16px;
-      font-weight: bold;
+      font-size: 15px;
+      font-weight: 600;
       cursor: pointer;
     }
 
     .secondary-btn:hover {
-      background: #454853;
+      background: #45464d;
     }
 
     .signup {
       display: block;
-      margin-top: 36px;
+      margin-top: 28px;
       color: white;
-      font-size: 16px;
+      font-size: 14px;
       text-decoration: none;
     }
 
     .signup span {
-      font-weight: bold;
+      font-weight: 700;
     }
   </style>
 </head>
@@ -127,11 +126,7 @@
 
   <div class="login-box">
 
-    <h1>Login Demo</h1>
-
-    <p class="demo-text">
-      Demo only — not affiliated with Roblox
-    </p>
+    <h1>Log In</h1>
 
     <input
       type="text"
@@ -149,9 +144,9 @@
       Log In
     </button>
 
-    <a href="#" class="forgot">
+    <div class="forgot">
       Forgot Password or Username?
-    </a>
+    </div>
 
     <div class="divider"></div>
 
@@ -163,9 +158,9 @@
       Quick Sign-in
     </button>
 
-    <a href="#" class="signup">
+    <div class="signup">
       Don't have an account? <span>Sign Up</span>
-    </a>
+    </div>
 
   </div>
 
