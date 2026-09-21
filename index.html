@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Log In</title>
-
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -44,19 +40,14 @@
       padding: 0 13px;
       border: 1px solid #3f4148;
       border-radius: 6px;
-      background: #000000;
+      background: #000;
       color: white;
       font-size: 15px;
       outline: none;
     }
 
-    input::placeholder {
-      color: #b8b8b8;
-    }
-
-    input:focus {
-      border-color: #777;
-    }
+    input::placeholder { color: #b8b8b8; }
+    input:focus { border-color: #777; }
 
     .login-btn {
       width: 100%;
@@ -64,23 +55,20 @@
       margin-top: 10px;
       border: 1px solid #555;
       border-radius: 6px;
-      background: #000000;
+      background: #000;
       color: white;
       font-size: 15px;
       font-weight: 600;
       cursor: pointer;
     }
 
-    .login-btn:hover {
-      background: #111111;
-    }
+    .login-btn:hover { background: #111; }
 
     .forgot {
       margin: 22px 0 25px;
       color: white;
       font-size: 14px;
       font-weight: 600;
-      cursor: pointer;
     }
 
     .divider {
@@ -102,9 +90,7 @@
       cursor: pointer;
     }
 
-    .secondary-btn:hover {
-      background: #45464d;
-    }
+    .secondary-btn:hover { background: #45464d; }
 
     .signup {
       margin-top: 28px;
@@ -112,57 +98,27 @@
       font-size: 14px;
     }
 
-    .signup span {
-      font-weight: 700;
-      cursor: pointer;
-    }
+    .signup span { font-weight: 700; }
   </style>
-
 </head>
 
 <body>
-
   <div class="login-box">
+    <h1>Log In</h1>
 
-```
-<h1>Log In</h1>
+    <input type="text" placeholder="Username/Email/Phone" autocomplete="off">
+    <input type="password" placeholder="Password" autocomplete="off">
 
-<input
-  type="text"
-  placeholder="Username/Email/Phone"
-  autocomplete="off"
->
+    <button class="login-btn" type="button">Log In</button>
 
-<input
-  type="password"
-  placeholder="Password"
-  autocomplete="off"
->
+    <div class="forgot">Forgot Password or Username?</div>
 
-<button class="login-btn" type="button">
-  Log In
-</button>
+    <div class="divider"></div>
 
-<div class="forgot">
-  Forgot Password or Username?
-</div>
+    <button class="secondary-btn" type="button">Email Me a One-Time Code</button>
+    <button class="secondary-btn" type="button">Quick Sign-in</button>
 
-<div class="divider"></div>
-
-<button class="secondary-btn" type="button">
-  Email Me a One-Time Code
-</button>
-
-<button class="secondary-btn" type="button">
-  Quick Sign-in
-</button>
-
-<div class="signup">
-  Don't have an account? <span>Sign Up</span>
-</div>
-```
-
+    <div class="signup">Don't have an account? <span>Sign Up</span></div>
   </div>
-
 </body>
 </html>
